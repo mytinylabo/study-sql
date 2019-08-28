@@ -33,3 +33,11 @@ docker-compose exec db psql -U postgres
 ```
 docker-compose exec db psql -U postgres -d shop -f sqls/list1-2.sql
 ```
+
+## 永続データを初期化
+
+```
+docker-compose down
+docker volume rm study-sql_data
+docker-compose up -d
+```
