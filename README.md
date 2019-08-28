@@ -25,3 +25,11 @@ docker-compose exec db psql -U postgres
 - サーバ: db
 - ユーザ名: postgres
 - パスワード: example
+
+## SQLファイルを実行
+
+`shop`というデータベースが作成済みとして`sqls/list1-2.sql`を実行する例:
+
+```
+docker-compose exec db psql -U postgres -d shop -f sqls/list1-2.sql
+```
