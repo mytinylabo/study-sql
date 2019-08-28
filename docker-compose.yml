@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  db:
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - study_db:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+
+volumes:
+  study_db:
+    driver: local
