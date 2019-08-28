@@ -5,11 +5,12 @@ services:
   db:
     build:
       context: ./postgres
-      dockerfile: Dockerfile
     environment:
       POSTGRES_PASSWORD: example
     volumes:
       - study_db:/var/lib/postgresql/data
+      - ./:/workspace
+    working_dir: /workspace
 
   adminer:
     image: adminer
