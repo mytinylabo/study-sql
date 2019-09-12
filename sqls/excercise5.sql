@@ -6,7 +6,7 @@ select shohin_mei, hanbai_tanka, torokubi
  where hanbai_tanka >= 1000 and torokubi = '2009-09-20';
 
 -- 5.2
--- shohin_idのNOT NULL制約違反のためエラー
+-- shohin_id, shohin_bunruiのNOT NULL制約違反のためエラー
 
 -- 5.3
 select shohin_id, shohin_mei, shohin_bunrui, hanbai_tanka,
