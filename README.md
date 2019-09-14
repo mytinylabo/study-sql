@@ -34,6 +34,13 @@ docker-compose exec db psql -U postgres
 docker-compose exec db psql -U postgres -d shop -f sqls/list1-2.sql
 ```
 
+もしくは、CLIで接続後
+
+```
+\c shop
+\i sqls/list1-2.sql
+```
+
 ## 永続データを初期化
 
 ```
