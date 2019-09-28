@@ -124,18 +124,6 @@ insert into Digits values (8);
 insert into Digits values (9);
 commit;
 
-create table Numbers (
-    num integer not null
-)
-as
-select
-    D1.digit * 10 + D2.digit as num
-from
-    Digits D1
-    cross join Digits D2
-end
-;
-
 create table Numbers
 as
 select
